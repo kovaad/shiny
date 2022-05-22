@@ -5,6 +5,7 @@ library(data.table)
 library(DT)
 library(plotly)
 library(networkD3)
+library(dplyr)
 
 source('global.R')
 
