@@ -8,8 +8,6 @@ library(networkD3)
 
 source('global.R')
 
-
-
 ui <-dashboardPage(
     
     dashboardHeader(title = 'Football Transfers'),
