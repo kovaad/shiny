@@ -9,8 +9,7 @@ get_ggplot_plot <- function(df, radio) {
 get_data_by_ticker  <- function(ticker, ticker2, rank) {
   
   tryCatch({
-    my_data <- read_csv("../data/Node_final_sum_final.csv") #to be uploaded to github and query from there
-    
+    my_data <- read.csv("https://raw.githubusercontent.com/kovaad/shiny/main/data/Node_final_sum_final.csv")
     my_data <- data.table(my_data)
     
     my_data <- my_data[(season_now==ticker) & (country_now==ticker2) & (rk_final >= rank[1]) & (rk_final < rank[2])]
@@ -34,10 +33,10 @@ get_data_by_ticker  <- function(ticker, ticker2, rank) {
 get_edge_data_by_ticker  <- function(ticker, ticker2, rank) {
   
   tryCatch({
-    my_data <- read_csv("../data/df_name_corr.csv") #to be uploaded to github and query from there
+    my_data <- read.csv("https://raw.githubusercontent.com/kovaad/shiny/main/data/df_name_corr.csv")
     my_data <- data.table(my_data)
     
-    my_data2 <- read_csv("../data/Node_final_sum_final.csv") 
+    my_data2 <- read.csv("https://raw.githubusercontent.com/kovaad/shiny/main/data/Node_final_sum_final.csv") 
     my_data2 <- data.table(my_data2)
     my_data2 <- my_data2[(season_now==ticker) & (country_now==ticker2) & (rk_final >= rank[1]) & (rk_final < rank[2])]
     
