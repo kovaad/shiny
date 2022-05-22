@@ -1,3 +1,6 @@
+library(dplyr)
+
+
 get_ggplot_plot <- function(df, radio) {
   ggplot(df, aes(reorder(club, -get(radio)), get(radio)))+
     geom_col(color = "black", fill = "blue")+
